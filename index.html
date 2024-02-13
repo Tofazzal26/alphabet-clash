@@ -14,11 +14,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        .poppin-san{
+            font-family: "Poppins", sans-serif;
+        }
+        .anton-font{
+            font-family: "Anton", sans-serif;
+        }
+    </style>
     <title>Alphabet-Clash</title>
+
 </head>
-<body>
-    <main>
-        
+<body class="poppin-san">
+    <main class="bg-[#010313] min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center">
+        <!-- play alphabet clash -->
+        <section class="hidden">
+            <div class="flex flex-col justify-center items-center min-h-screen"> 
+                <h1 class="anton-font font-normal text-[100px] text-[#FFFFFF]">ALPHABET CLASH</h1>
+                <p class="font-medium text-xl text-[#FFFFFF] mb-8">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+                <button class=" font-semibold text-xl px-4 py-3 rounded-md bg-white text-black">Play Now</button>
+            </div>
+        </section>
+
+        <!-- game play alphabet clash -->
+        <section>
+            <div class="flex justify-center">
+                <div class="artboard artboard-horizontal phone-6 border-[14px] border-[#252634] rounded-md bg-[#FFFFFFB3] mt-20">
+                    <div class="bg-[#252634] w-[340px] mx-auto rounded-b-lg">
+                        <p class="text-center pb-2 text-[#FFFFFF]">Don't watch keyboard  while playing...</p>
+                    </div>
+                    <div class="flex justify-center items-center h-[240px]">
+                        <h1 class="text-black font-semibold text-[100px]">Y</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 </html>
