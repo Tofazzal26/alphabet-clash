@@ -21,6 +21,17 @@ function getArandomAlphabet() {
     return alphabetNum;
 }
 
+function scoreBoardElementId(elementId) {
+    const element = document.getElementById(elementId);
+    const elementValue = element.innerText;
+    const elementNum = parseInt(elementValue);
+    return  elementNum;
+}
+
+function setUpdatedValue(elementId, value) {
+    const element = document.getElementById(elementId);
+    element.innerText = value;
+}
 
 function setBackgroundColor(elementId) {
     const element = document.getElementById(elementId);

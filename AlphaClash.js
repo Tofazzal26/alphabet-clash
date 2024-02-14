@@ -1,24 +1,26 @@
-
-
-
-
-
-
-
 function handleKeyboardPressButton(event) {
     const playerPress = event.key;
     const expectedValue = document.getElementById('currentAlphabet');
     const expected = expectedValue.innerText;
     const expectedElement = expected.toLowerCase();
-    console.log("expected",expectedElement);
-    console.log("player press", playerPress);
 
     if( playerPress === expectedElement) {
-        console.log('you win a point');
+        
+        const scoreElement = scoreBoardElementId('current-score');
+        const updateScore = scoreElement + 1;
+        setUpdatedValue('current-score', updateScore);
+
+
         removeBackgroundColor(expectedElement);
         continueGame();
     }else {
-        console.log('you lose a point...');
+        
+        const lifeElement = scoreBoardElementId('current-life');
+        const updateLife = lifeElement - 1;
+        setUpdatedValue('current-life',updateLife);
+        if( updateLife === 0) {
+            gameOver();
+        }
     }
 
 }
@@ -36,7 +38,16 @@ function continueGame() {
 
 function play() {
     hideElementId('home-screen');
+    hideElementId('gameOver');
     showElementId('play-screen');
+
+    setUpdatedValue('current-life', 5);
+    setUpdatedValue('current-score', 0);
+
     continueGame();
 }
 
+function gameOver(){
+    hideElementId('play-screen');
+    showElementId('gameOver');
+}
