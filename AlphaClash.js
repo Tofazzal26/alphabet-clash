@@ -1,8 +1,14 @@
+
+
 function handleKeyboardPressButton(event) {
     const playerPress = event.key;
     const expectedValue = document.getElementById('currentAlphabet');
     const expected = expectedValue.innerText;
     const expectedElement = expected.toLowerCase();
+
+    if( playerPress === 'Escape') {
+        gameOver();
+    }
 
     if( playerPress === expectedElement) {
         
@@ -50,4 +56,11 @@ function play() {
 function gameOver(){
     hideElementId('play-screen');
     showElementId('gameOver');
+    const lastScore = scoreBoardElementId('current-score'); 
+    setUpdatedValue('last-score', lastScore);
+    const alphabetElement = getTextElementId('currentAlphabet');
+    removeBackgroundColor(alphabetElement);
 }
+
+
+
